@@ -1,0 +1,16 @@
+Id CommandLine
+  -- -----------
+   Создание компилятора composer
+  1 docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
+
+  Запуск сервисов отдельных сервисов php, nginx, mysql
+  2 docker-compose up -d php server mysql
+
+  Запуск когда прописаны сервис в depends_on в docker-compose.yaml
+  3 docker-compose up -d server
+
+   Запуск с пересбором в образа 
+  4 docker-compose up -d --build server
+   
+   Запуск служебнокго контейнера с ключами передающиеся в entrypoint
+  5 docker-compose run --rm artisan migrate
