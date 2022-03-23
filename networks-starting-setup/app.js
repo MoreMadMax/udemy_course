@@ -43,7 +43,7 @@ app.post('/favorites', async (req, res) => {
     await favorite.save();
     res
       .status(201)
-      .json({ message: 'Favorite saved!', favorite: favorite.toObject() });
+      .json({ message: 'Favorite saved!!', favorite: favorite.toObject() });
   } catch (error) {
     res.status(500).json({ message: 'Something went wrong.' });
   }
